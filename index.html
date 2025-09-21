@@ -1,0 +1,503 @@
+<html>
+<head>
+<title>𝐃𝐨𝐫𝐞𝐢𝐜𝐡𝐚𝐧 𝐒𝐂𝐑𝐈𝐏𝐓</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+html {
+    zoom:1.2;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    color: white;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    
+    
+    
+}
+
+*:not(input,checkbox,textarea) {
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   user-select: none;
+   outline: none;
+   -webkit-tap-highlight-color:black;
+   background-color: #323232;
+}
+
+input {
+    background-color:black;
+    height: 30px;
+}
+
+button {
+    height: 30px;
+    background-color:#333132;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+button:active {
+     transform: translateY(2px);
+}
+
+input[type=radio]  {
+    width:20px;
+    height:20px;
+    margin-right:6px;
+    border:none;
+    outline-style:none;
+    -webkit-appearance:none;
+    vertical-align:middle;
+    border:1px solid #DDDDDDF0;
+    border-radius:50%;
+}
+input[type=radio]:checked {
+    border:6px solid #2F7DCDF0;
+    background:#FFFFFF;
+}
+    
+input[type=checkbox]{
+ visibility: hidden;
+ vertical-align:middle; margin-bottom:2px;
+ cursor: pointer;
+ position: relative;
+ width: 24px;
+ height: 24px;
+}
+input[type=checkbox]::after{
+ position: absolute;
+ top: 0;
+ margin-top:2px;
+ width: 14px; height: 14px;
+ border: 1px solid #EEEEEE;
+ border-radius: 3px;
+ background-color: rgba(0,0,0,0);
+ display: inline-block;
+ visibility: visible;
+ text-align: center;
+ content: ' ';
+}
+input[type=checkbox]:checked::after{
+ content: "✓";
+ border-color: #4498F7;
+ background-color: #4498F7;
+ font-size: 12px;
+ font-weight: bold;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  height: 15px;
+  cursor: pointer;
+  animate: 0.2s;
+  background:balck;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 2px solid #000000;
+  height: 18px;
+  width: 16px;
+  border-radius: 3px;
+  background: #FFFFFFE0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -2px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+    
+ 
+.menubox {
+        width: 60px;
+        height: 30px;
+        line-height: 30px; 
+        text-align:center;
+        border: 1px solid #ccc;
+}
+.menubox.current {
+    border: 1px solid white;
+    background-color: gray;
+}
+
+.menuview {
+    display:none;
+}
+
+.menuview.current {
+    display:block;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.togglebutton1 {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 15px;
+    border-radius: 12.5px;
+    background-color: #dddddd;
+    cursor: pointer;
+    transition: background-color .4s;
+}
+
+.togglebutton1:has(:checked) {
+    background-color: #4bd865;
+}
+
+.togglebutton1::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    background-color: #fff;
+    content: '';
+    transition: left .4s;
+}
+
+.togglebutton1:has(:checked)::after {
+    left: 15px;
+}
+
+.togglebutton1 input {
+    display: none;
+}
+.sigil-of-creator {
+      font-size: 12px;
+      margin-bottom: 40px;
+      color: #ffffff;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #000000;
+      text-decoration: none;
+      transition: transform 0.2s, text-shadow 0.3s;
+    }
+  
+        .menu-content {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            max-height: 320px;
+            overflow-y: auto;
+            padding-right: 10px;
+            background: #fafafa;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        .script-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            max-width: 500px;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .script-name {
+            flex: 0 0 auto;
+            min-width: 120px;
+            white-space: nowrap;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .script-input {
+            flex: 1;
+            margin: 0 12px;
+        }
+
+        .script-input input {
+            width: 100%;
+            padding: 6px 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+.sigil-of-creator {
+      font-size: 14px;
+      margin-bottom: 40px;
+      color: #ffffff;
+      text-shadow: 0 0 5px gray, 0 0 10px black;
+      text-decoration: none;
+      transition: transform 0.2s, text-shadow 0.3s;
+    }
+
+</style>
+
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    
+if(typeof $ == 'undefined') alert("网络连接失败, 请重新启动!");
+
+$(document).ready(function(){
+    
+    $("div.menubox").click(function(){
+        $("div.menubox").removeClass("current");
+        $("div.menuview").removeClass("current");
+        $(this).addClass("current");
+        
+        var menuid = $(this).attr("menu");
+        $("div#"+menuid).addClass("current");
+    });
+    
+    
+    document.body.onselectstart = document.body.ondrag =function(){
+        return false;
+    }
+    
+    $("input").blur(function(){
+        window.scroll(0,0);
+    });
+    
+    
+    document.body.addEventListener('touchstart', function () {});
+
+    if(typeof h5gg!='undefined') {
+        
+        setWindowDrag(0, 0, 400, 80);
+        
+        setWindowRect(60,60,300,300);
+    }
+});
+function troll3(input) {
+    if (input.checked) {
+        h5gg.clearResults();
+        h5gg.searchNumber('180', 'F32', '0x000000000', '0x200000000');
+        h5gg.editAll('0.332211', 'F32');
+    } else {
+        h5gg.clearResults();
+        h5gg.searchNumber('0.332211', 'F32', '0x000000000', '0x200000000');
+        h5gg.editAll('180', 'F32');
+    }
+}
+function troll4(input) {
+    if (input.checked) {
+        h5gg.clearResults();
+      h5gg.searchNumber('-9.8', 'F32', '0x000000000', '0x200000000');
+      h5gg.editAll('0.000000000000000000001', 'F32');
+    } else {
+        h5gg.clearResults();
+      h5gg.searchNumber('0.000000000000000000001', 'F32', '0x000000000', '0x200000000');
+      h5gg.editAll('-9.8', 'F32');
+    }
+    
+}
+//troll
+//car
+function engin1() {
+      h5gg.clearResults();
+      let hp = prompt("あなたのHPを入力してください:");
+      h5gg.searchNumber(hp, 'F32', '0x000000000', '0x200000000');
+      let newHp = prompt("好きなHPを入力してください:");
+      h5gg.editAll(newHp, 'F32');
+      h5gg.clearResults();
+      let torque = prompt("あなたのトルクを入力してください:");
+      h5gg.searchNumber(torque, 'F32', '0x000000000', '0x200000000');
+      let newTorque = prompt("好きなトルクを入力してください:");
+      h5gg.editAll(newTorque, 'F32');
+    }    
+//engine
+function misk1() {
+      h5gg.clearResults();
+      h5gg.searchNumber('-4294967078', 'I64', '0x000000000', '0x200000000');
+      h5gg.editAll('-4294967079', 'I64');
+    }
+function misk2(v) {
+            h5gg.clearResults();
+            h5gg.searchNumber("4535389738344906752", "I64", "0x0", "0x200000000");
+            const results = h5gg.getResults(h5gg.getResultsCount());
+            const j = [];
+            for (let i = 0; i < results.length; i++) {
+                const tmp = Number(results[i].address) + 0x4C;
+                const val = Number(h5gg.getValue(tmp, "I32"));
+                if (val >= 1 && val <= 9999) j.push(val);
+            }
+            h5gg.clearResults();
+            if (j.length) {
+                alert("ルームパスワード:\n" + j.join("\n"));
+                toast(`${getScriptName(9)} 完了`);
+            } else {
+                alert("パスワードが見つかりませんでした。");
+            }
+    }
+
+
+function misk3() {
+            h5gg.clearResults();
+            h5gg.searchNumber("4543443241174818784", "I32", "0x0", "0x200000000");
+            const results = h5gg.getResults(h5gg.getResultsCount());
+            h5gg.searchNearby('12', 'I32', '0x100');
+            h5gg.searchNumber("12", "I32", "0x0", "0x200000000");
+            h5gg.editAll('20', 'I32');
+            h5gg.clearResults();
+          }
+
+function misk4() {
+            h5gg.clearResults();
+            h5gg.searchNumber("25769804032", "I32", "0x0", "0x200000000");
+            const results = h5gg.getResults(h5gg.getResultsCount());
+            h5gg.searchNearby('100', 'I32', '0x100');
+            h5gg.searchNumber("100", "I32", "0x0", "0x200000000");
+            h5gg.editAll('-1', 'I32');
+            h5gg.clearResults();
+        }
+//misk
+
+
+    //test
+function run4(v) {
+            alert('パーツを選択してから実行');
+            h5gg.clearResults();
+            let  = prompt("好きな数値を入力:");
+            h5gg.searchNumber("4575657222496845824", "I64", "0x0", "0x200000000");
+            const results = h5gg.getResults(h5gg.getResultsCount());
+            for (let i = 0; i < results.length; i++) {
+                const base = Number(results[i].address);
+                const target = base + 0x1E0;
+                h5gg.setValue(target, v, "I32");
+            }
+            h5gg.clearResults();
+            toast("移植完了");
+        }
+
+//airsuspention
+let foundAddresses2 = null;
+
+    async function airsus(value, label) {
+      try {
+        if (!foundAddresses2) {
+
+          foundAddresses2 = await searchInitialHeights2();
+        }
+
+        if (!foundAddresses2 || foundAddresses2.length === 0) {
+          alert("数値が見つかりません");
+          return;
+        }
+
+
+        for (let i = 0; i < foundAddresses2.length; i++) {
+          h5gg.setValue(foundAddresses2[i].address, value, "F32");
+        }
+      } catch (e) {
+        alert("エラー: " + e.message);
+      }
+    }
+
+    async function searchInitialHeights2() {
+      const searchValues = [-9.8, -20.333333, -10.333333, -30.333333];
+      let totalResults = [];
+
+      for (let v of searchValues) {
+        h5gg.clearResults();
+        h5gg.searchNumber(v.toString(), "F32", "0x000000000", "0x200000000");
+        await new Promise(resolve => setTimeout(resolve, 300));
+        let results = h5gg.getResults(1000, 0);
+        if (results && results.length > 0) {
+          totalResults.push(...results);
+        }
+      }
+
+      h5gg.clearResults();
+      return totalResults;
+    }
+//setting
+setButtonImage('https://megapx-assets.dcard.tw/images/7dbf3d7a-48d6-42ef-b9fd-82d9f3cf8bd5/640.jpeg');
+        setWindowDrag(0, 0, 300, 50);
+
+//setting
+</script>
+
+</head>
+
+<body bgcolor="#202C3E" style="margin:0;">
+
+<div id="titleBar" style="background-color:#202020; padding:5px; margin:0px;">
+&nbsp;𝐃𝐨𝐫𝐞𝐢𝐜𝐡𝐚𝐧 𝐒𝐂𝐑𝐈𝐏𝐓
+</div>
+
+<table id="bodyView" width="100%" style="table-layout:fixed;height: calc(100% - 30px) ;">
+    
+<tr>
+    
+<td width="30%" style="vertical-align:top">
+    
+<div>
+    <div class="menubox current" menu="menu1">𝐔𝐬𝐮𝐚𝐥𝐥𝐲</div>
+    <div class="menubox" menu="menu2">𝐂𝐚𝐫</div>
+    <div class="menubox" menu="menu3">𝐌𝐢𝐬𝐤</div>
+</div>
+</td>
+<td style="vertical-align:top" class="scrollbar">
+<div id="menu1" class="menuview current">
+    <p>𝐂𝐚𝐫 𝐟𝐚𝐥𝐥𝐢𝐧𝐠</p>
+
+    <label class="togglebutton1">
+        <input type="checkbox" onclick="troll3(this)"/>
+    </label>
+    <p>𝐀𝐢𝐫 𝐖𝐚𝐥𝐤</p>
+    <label class="togglebutton1">
+        <input type="checkbox" onclick="troll4(this)"/>
+      </label>
+</div>
+
+<div id="menu2" class="menuview">
+    <button onclick="engin1()">𝐜𝐮𝐬𝐭𝐨𝐦 𝐄𝐧𝐠𝐢𝐧𝐞</button>
+<p>--------𝐀𝐢𝐫 𝐒𝐮𝐬𝐩𝐞𝐧𝐬𝐢𝐨𝐧--------</p>
+    <button class="button" onclick="airsus(-9.8, '治す')">𝐁𝐨𝐨𝐭</button>
+    <p></p>
+    <button class="button" onclick="airsus(-10.333333, '低い')">𝐔𝐩</button>
+    <p></p>
+    <button class="button" onclick="airsus(-20.333333, '普通')">𝐌𝐢𝐝𝐝𝐥𝐞</button>
+    <p></p>
+    <button class="button" onclick="airsus(-30.333333, '高い')">𝐃𝐨𝐰𝐧</button>
+    <p></p>
+</div>
+
+<div id="menu3" class="menuview">  
+    <button onclick="misk1()">𝐂𝐫𝐨𝐰𝐧 𝐔𝐧𝐥𝐨𝐜𝐤</button>
+    <p>
+    <button onclick="misk2()">𝐑𝐨𝐨𝐦 𝐏𝐚𝐬𝐬</button>
+    <p>
+    <button onclick="misk3()">𝐋𝐨𝐧𝐠 𝐍𝐚𝐦𝐞</button>
+    <p>
+    <button onclick="misk4()">𝐂𝐡𝐚𝐭 𝐋𝐢𝐦𝐢𝐭</button>
+    <p>
+</div>
+</div>
+
+
+</body>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+</html>
