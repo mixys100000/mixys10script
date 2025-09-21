@@ -303,9 +303,21 @@ function troll4(input) {
         h5gg.clearResults();
       h5gg.searchNumber('0.000000000000000000001', 'F32', '0x000000000', '0x200000000');
       h5gg.editAll('-9.8', 'F32');
+    　h5gg.clearResults();
     }
-    
 }
+function troll1(input) {
+    if (input.checked) {
+        h5gg.clearResults();
+        h5gg.searchNumber('180', 'F32', '0x000000000', '0x200000000');
+        h5gg.editAll('170.33333', 'F32');
+        h5gg.clearResults();
+    } else {
+        h5gg.clearResults();
+        h5gg.searchNumber('170.33333', 'F32', '0x000000000', '0x200000000');
+        h5gg.editAll('180', 'F32');
+        h5gg.clearResults();
+    }
 //troll
 //car
 function engin1() {
@@ -445,12 +457,12 @@ let foundAddresses2 = null;
     <div class="menubox current" menu="menu1">𝐔𝐬𝐮𝐚𝐥𝐥𝐲</div>
     <div class="menubox" menu="menu2">𝐂𝐚𝐫</div>
     <div class="menubox" menu="menu3">𝐌𝐢𝐬𝐤</div>
+    <div class="menubox" menu="menu4">𝐀𝐢𝐫 𝐒𝐮𝐬</div>
 </div>
 </td>
 <td style="vertical-align:top" class="scrollbar">
 <div id="menu1" class="menuview current">
     <p>𝐂𝐚𝐫 𝐟𝐚𝐥𝐥𝐢𝐧𝐠</p>
-
     <label class="togglebutton1">
         <input type="checkbox" onclick="troll3(this)"/>
     </label>
@@ -458,21 +470,19 @@ let foundAddresses2 = null;
     <label class="togglebutton1">
         <input type="checkbox" onclick="troll4(this)"/>
       </label>
+    <p>𝐅𝐥𝐲</p>
+    <label class="togglebutton1">
+        <input type="checkbox" onclick="troll1(this)"/>
+    </label>
+    <p>𝐓𝐞𝐬𝐭</p>
+    <label class="togglebutton1">
+        <input type="checkbox" onclick="troll2(this)"/>
+    </label>
 </div>
 
 <div id="menu2" class="menuview">
     <button onclick="engin1()">𝐜𝐮𝐬𝐭𝐨𝐦 𝐄𝐧𝐠𝐢𝐧𝐞</button>
-<p>--------𝐀𝐢𝐫 𝐒𝐮𝐬𝐩𝐞𝐧𝐬𝐢𝐨𝐧--------</p>
-    <button class="button" onclick="airsus(-9.8, '治す')">𝐁𝐨𝐨𝐭</button>
-    <p></p>
-    <button class="button" onclick="airsus(-10.333333, '低い')">𝐔𝐩</button>
-    <p></p>
-    <button class="button" onclick="airsus(-20.333333, '普通')">𝐌𝐢𝐝𝐝𝐥𝐞</button>
-    <p></p>
-    <button class="button" onclick="airsus(-30.333333, '高い')">𝐃𝐨𝐰𝐧</button>
-    <p></p>
 </div>
-
 <div id="menu3" class="menuview">  
     <button onclick="misk1()">𝐂𝐫𝐨𝐰𝐧 𝐔𝐧𝐥𝐨𝐜𝐤</button>
     <p>
@@ -482,6 +492,16 @@ let foundAddresses2 = null;
     <p>
     <button onclick="misk4()">𝐂𝐡𝐚𝐭 𝐋𝐢𝐦𝐢𝐭</button>
     <p>
+</div>
+<div id="menu4" class="menuview">
+    <button class="button" onclick="airsus(-9.8, '治す')">𝐁𝐨𝐨𝐭</button>
+    <p></p>
+    <button class="button" onclick="airsus(-10.333333, '低い')">𝐔𝐩</button>
+    <p></p>
+    <button class="button" onclick="airsus(-20.333333, '普通')">𝐌𝐢𝐝𝐝𝐥𝐞</button>
+    <p></p>
+    <button class="button" onclick="airsus(-30.333333, '高い')">𝐃𝐨𝐰𝐧</button>
+    <p></p>
 </div>
 </div>
 
