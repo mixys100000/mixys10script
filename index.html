@@ -435,7 +435,7 @@ let foundAddresses2 = null;
     }
 
     async function searchInitialHeights2() {
-      const searchValues = [-9.8, -20.333333, -10.333333, -30.333333];
+      const searchValues = [, 0.000001, -5.33333, -9.8];
       let totalResults = [];
 
       for (let v of searchValues) {
@@ -477,7 +477,7 @@ let foundAddresses2 = null;
     <div class="menubox current" menu="menu1">𝐔𝐬𝐮𝐚𝐥𝐥𝐲</div>
     <div class="menubox" menu="menu2">𝐂𝐚𝐫</div>
     <div class="menubox" menu="menu3">𝐌𝐢𝐬𝐤</div>
-    <div class="menubox" menu="menu4">𝐀𝐢𝐫 𝐒𝐮𝐬</div>
+    <div class="menubox" menu="menu4">𝐅𝐥𝐲</div>
 </div>
 </td>
 <td style="vertical-align:top" class="scrollbar">
@@ -518,13 +518,11 @@ let foundAddresses2 = null;
         
 </div>
 <div id="menu4" class="menuview">
-    <button class="button" onclick="airsus(-9.8, '治す')">𝐁𝐨𝐨𝐭</button>
+    <button class="button" onclick="airsus(-9.8, '通常')">通常</button>
     <p></p>
-    <button class="button" onclick="airsus(-10.333333, '低い')">𝐔𝐩</button>
+    <button class="button" onclick="airsus(0.000001, '無重力')">無重力</button>
     <p></p>
-    <button class="button" onclick="airsus(-20.333333, '普通')">𝐌𝐢𝐝𝐝𝐥𝐞</button>
-    <p></p>
-    <button class="button" onclick="airsus(-30.333333, '高い')">𝐃𝐨𝐰𝐧</button>
+    <button class="button" onclick="airsus(-5.33333, '浮遊')">浮遊</button>
     <p></p>
 </div>
 </div>
