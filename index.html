@@ -332,6 +332,7 @@ function engin1() {
       h5gg.searchNumber(torque, 'F32', '0x000000000', '0x200000000');
       let newTorque = prompt("好きなトルクを入力してください:");
       h5gg.editAll(newTorque, 'F32');
+      h5gg.clearResults();
     }    
 
 function cheatparts() {
@@ -505,7 +506,8 @@ let foundAddresses = null;
 
 <div id="menu2" class="menuview">
     <button onclick="engin1()">𝐜𝐮𝐬𝐭𝐨𝐦 𝐄𝐧𝐠𝐢𝐧𝐞</button>
-    <button onclick="cheatparts()">𝐏𝐚𝐫𝐭𝐬</button>
+   <p>
+     <button onclick="cheatparts()">𝐏𝐚𝐫𝐭𝐬</button>
 </div>
 
 <div id="menu3" class="menuview">  
