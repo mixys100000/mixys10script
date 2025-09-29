@@ -283,98 +283,35 @@ $(document).ready(function(){
         setWindowRect(60,60,300,300);
     }
 });
-function troll3(input) {
+
+function wallhack(input) {
     if (input.checked) {
         h5gg.clearResults();
-        h5gg.searchNumber('180', 'F32', '0x000000000', '0x200000000');
-        h5gg.editAll('0.332211', 'F32');
-    } else {
-        h5gg.clearResults();
-        h5gg.searchNumber('0.332211', 'F32', '0x000000000', '0x200000000');
-        h5gg.editAll('180', 'F32');
-    }
-}
-function troll4(input) {
-    if (input.checked) {
-        h5gg.clearResults();
-      h5gg.searchNumber('-9.8', 'F32', '0x000000000', '0x200000000');
-      h5gg.editAll('0.000000000000000000001', 'F32');
-    } else {
-        h5gg.clearResults();
-      h5gg.searchNumber('0.000000000000000000001', 'F32', '0x000000000', '0x200000000');
-      h5gg.editAll('-9.8', 'F32');
-    　h5gg.clearResults();
-    }
-}
-function troll1(input) {
-    if (input.checked) {
-        h5gg.clearResults();
-        h5gg.searchNumber('180', 'F32', '0x000000000', '0x200000000');
-        h5gg.editAll('170.33333', 'F32');
+        h5gg.searchNumber('-9.8', 'F32', '0x000000000', '0x200000000');
+        h5gg.editAll('5.33333', 'F32');
         h5gg.clearResults();
     } else {
         h5gg.clearResults();
-        h5gg.searchNumber('170.33333', 'F32', '0x000000000', '0x200000000');
-        h5gg.editAll('180', 'F32');
+        h5gg.searchNumber('5.33333', 'F32', '0x000000000', '0x200000000');
+        h5gg.editAll('-9.8', 'F32');
         h5gg.clearResults();
     }
 
-//troll
-//car
-
-function engin() {
-      h5gg.clearResults();
-      let hp = prompt("あなたのHPを入力してください:");
-      h5gg.searchNumber(hp, 'F32', '0x000000000', '0x200000000');
-      let newHp = prompt("好きなHPを入力してください:");
-      h5gg.editAll(newHp, 'F32');
-      h5gg.clearResults();
-      let torque = prompt("あなたのトルクを入力してください:");
-      h5gg.searchNumber(torque, 'F32', '0x000000000', '0x200000000');
-      let newTorque = prompt("好きなトルクを入力してください:");
-      h5gg.editAll(newTorque, 'F32');
-      h5gg.clearResults();
-    }    
-function cheatparts() {
+function flycar(input) {
+    if (input.checked) {
         h5gg.clearResults();
-        alert('パーツ#2に移動');
-        h5gg.searchNumber('1', 'I64', '0x000000000', '0x200000000');
-        alert('パーツ#3に移動');
-        h5gg.searchNumber('2', 'I64', '0x000000000', '0x200000000');
-        alert('パーツ#4に移動');
-        h5gg.searchNumber('3', 'I64', '0x000000000', '0x200000000');
-        let parts = pompt("数値を入力");
-        h5gg.editAll(parts, 'I64');
+        h5gg.searchNumber('-9.8', 'F32', '0x000000000', '0x200000000');
+        h5gg.editAll('5.33333', 'F32');
+        h5gg.clearResults();
+    } else {
+        h5gg.clearResults();
+        h5gg.searchNumber('5.33333', 'F32', '0x000000000', '0x200000000');
+        h5gg.editAll('-9.8', 'F32');
         h5gg.clearResults();
     }
-}
-//engine
-function misk1() {
-      h5gg.clearResults();
-      h5gg.searchNumber('-4294967078', 'I64', '0x000000000', '0x200000000');
-      h5gg.editAll('-4294967079', 'I64');
-    }
-function misk2(v) {
-            h5gg.clearResults();
-            h5gg.searchNumber("4535389738344906752", "I64", "0x0", "0x200000000");
-            const results = h5gg.getResults(h5gg.getResultsCount());
-            const j = [];
-            for (let i = 0; i < results.length; i++) {
-                const tmp = Number(results[i].address) + 0x4C;
-                const val = Number(h5gg.getValue(tmp, "I32"));
-                if (val >= 1 && val <= 9999) j.push(val);
-            }
-            h5gg.clearResults();
-            if (j.length) {
-                alert("ルームパスワード:\n" + j.join("\n"));
-                toast(`${getScriptName(9)} 完了`);
-            } else {
-                alert("パスワードが見つかりませんでした。");
-            }
-    }
 
 
-function misk3() {
+function longname() {
             h5gg.clearResults();
             h5gg.searchNumber("4543443241174818784", "I32", "0x0", "0x200000000");
             const results = h5gg.getResults(h5gg.getResultsCount());
@@ -383,78 +320,6 @@ function misk3() {
             h5gg.editAll('20', 'I32');
             h5gg.clearResults();
           }
-
-function misk4() {
-            h5gg.clearResults();
-            h5gg.searchNumber("25769804032", "I32", "0x0", "0x200000000");
-            const results = h5gg.getResults(h5gg.getResultsCount());
-            h5gg.searchNearby('100', 'I32', '0x100');
-            h5gg.searchNumber("100", "I32", "0x0", "0x200000000");
-            h5gg.editAll('-1', 'I32');
-            h5gg.clearResults();
-        }
-//misk
-
-
-    //test
-function run4(v) {
-            alert('パーツを選択してから実行');
-            h5gg.clearResults();
-            let  = prompt("好きな数値を入力:");
-            h5gg.searchNumber("4575657222496845824", "I64", "0x0", "0x200000000");
-            const results = h5gg.getResults(h5gg.getResultsCount());
-            for (let i = 0; i < results.length; i++) {
-                const base = Number(results[i].address);
-                const target = base + 0x1E0;
-                h5gg.setValue(target, v, "I32");
-            }
-            h5gg.clearResults();
-            toast("移植完了");
-        }
-
-//airsuspention
-let foundAddresses = null;
-
-    async function airsus(value, label) {
-      try {
-        if (!foundAddresses) {
-
-          foundAddresses = await searchInitialHeights();
-        }
-
-        if (!foundAddresses || foundAddresses.length === 0) {
-          alert("数値が見つかりませんでした");
-          return;
-        }
-
-
-        for (let i = 0; i < foundAddresses.length; i++) {
-          h5gg.setValue(foundAddresses[i].address, value, "F32");
-        }
-
-
-      } catch (e) {
-        alert("エラー: " + e.message);
-      }
-    }
-
-    async function searchInitialHeights() {
-      const searchValues = [-9.8, 5.333333, 0.20000];
-      let totalResults = [];
-
-      for (let v of searchValues) {
-        h5gg.clearResults();
-        h5gg.searchNumber(v.toString(), "F32", "0x000000000", "0x200000000");
-        await new Promise(resolve => setTimeout(resolve, 300));
-        let results = h5gg.getResults(1000, 0);
-        if (results && results.length > 0) {
-          totalResults.push(...results);
-        }
-      }
-
-      h5gg.clearResults();
-      return totalResults;
-    }
 
 //フォント
 //大文字𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙
@@ -468,7 +333,7 @@ let foundAddresses = null;
 <body bgcolor="#202C3E" style="margin:0;">
 
 <div id="titleBar" style="background-color:#202020; padding:5px; margin:0px;">
-&nbsp;𝐌𝐢𝐱𝐲𝐬 𝐒𝐂𝐑𝐈𝐏𝐓
+&nbsp;𝐌𝐢𝐱𝐲𝐬 𝐟𝐫𝐞𝐞 𝐌𝐎𝐃
 </div>
 
 <table id="bodyView" width="100%" style="table-layout:fixed;height: calc(100% - 30px) ;">
@@ -478,30 +343,22 @@ let foundAddresses = null;
 <td width="30%" style="vertical-align:top">
     
 <div>
-    <div class="menubox current" menu="menu1">𝐔𝐬𝐮𝐚𝐥𝐥𝐲</div>
-    <div class="menubox" menu="menu2">𝐂𝐚𝐫</div>
-    <div class="menubox" menu="menu3">𝐌𝐢𝐬𝐤</div>
-    <div class="menubox" menu="menu4">𝐆𝐫𝐚𝐯𝐢𝐭𝐲</div>
+    <div class="menubox current" menu="menu1">𝐌𝐞𝐧𝐮</div>
+    <div class="menubox" menu="menu2">𝐃𝐞𝐭𝐚𝐢𝐥𝐬</div>
 </div>
 </td>
 <td style="vertical-align:top" class="scrollbar">
 <div id="menu1" class="menuview current">
-    <p>𝐂𝐚𝐫 𝐟𝐚𝐥𝐥𝐢𝐧𝐠</p>
+    <p>𝐖𝐚𝐥𝐥 𝐡𝐚𝐜𝐤</p>
     <label class="togglebutton1">
-        <input type="checkbox" onclick="troll3(this)"/>
-    </label>
-    <p>𝐀𝐢𝐫 𝐖𝐚𝐥𝐤</p>
-    <label class="togglebutton1">
-        <input type="checkbox" onclick="troll4(this)"/>
+        <input type="checkbox" onclick="wallhack(this)"/>
       </label>
     <p>𝐅𝐥𝐲</p>
     <label class="togglebutton1">
-        <input type="checkbox" onclick="troll1(this)"/>
+        <input type="checkbox" onclick="longname(this)"/>
     </label>
-    <p>𝐓𝐞𝐬𝐭</p>
-    <label class="togglebutton1">
-        <input type="checkbox" onclick="troll2(this)"/>
-    </label>
+    <p>
+    <button onclick="longname()">𝐋𝐨𝐧𝐠 𝐍𝐚𝐦𝐞</button>
 </div>
 
 <div id="menu2" class="menuview">
@@ -509,26 +366,6 @@ let foundAddresses = null;
     <button onclick="engin()">𝐜𝐮𝐬𝐭𝐨𝐦 𝐄𝐧𝐠𝐢𝐧𝐞</button>
    <p>
      <button onclick="cheatparts()">𝐏𝐚𝐫𝐭𝐬</button>
-</div>
-
-<div id="menu3" class="menuview">  
-    <button onclick="misk1()">𝐂𝐫𝐨𝐰𝐧 𝐔𝐧𝐥𝐨𝐜𝐤</button>
-    <p>
-    <button onclick="misk2()">𝐑𝐨𝐨𝐦 𝐏𝐚𝐬𝐬</button>
-    <p>
-    <button onclick="misk3()">𝐋𝐨𝐧𝐠 𝐍𝐚𝐦𝐞</button>
-    <p>
-    <button onclick="misk4()">𝐂𝐡𝐚𝐭 𝐋𝐢𝐦𝐢𝐭</button>
-    <p>       
-</div>
-
-<div id="menu4" class="menuview">
-    <button class="button" onclick="airsus(5.333333, '治す')">1</button>
-    <p></p>
-    <button class="button" onclick="airsus(0.20000, '低い')">0</button>
-    <p></p>
-    <button class="button" onclick="airsus(-9.8, '普通')">-1</button>
-    <p></p>
 </div>
 </div>
 
