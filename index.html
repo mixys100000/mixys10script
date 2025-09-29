@@ -287,13 +287,15 @@ $(document).ready(function(){
 function wallhack(input) {
     if (input.checked) {
         h5gg.clearResults();
-        h5gg.searchNumber('-9.8', 'F32', '0x000000000', '0x200000000');
-        h5gg.editAll('5.33333', 'F32');
+        h5gg.searchNumber('-10', 'F32', '0x000000000', '0x200000000');
+        h5gg.searchNearby('49', 'I32', '0x100');
+        h5gg.searchNumber('-10', 'F32', '0x000000000', '0x200000000');
+        h5gg.editAll('999.33333', 'F32');
         h5gg.clearResults();
     } else {
         h5gg.clearResults();
-        h5gg.searchNumber('5.33333', 'F32', '0x000000000', '0x200000000');
-        h5gg.editAll('-9.8', 'F32');
+        h5gg.searchNumber('999.33333', 'F32', '0x000000000', '0x200000000');
+        h5gg.editAll('-10', 'F32');
         h5gg.clearResults();
     }
 
