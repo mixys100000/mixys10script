@@ -288,7 +288,7 @@ function wallhack(input) {
     if (input.checked) {
         h5gg.clearResults();
         h5gg.searchNumber('-10', 'F32', '0x000000000', '0x200000000');
-        h5gg.searchNearby('49', 'I32', '0x000000000');
+        h5gg.searchNearby('49', 'I32', '0x000000000', '0x200000000');
         h5gg.searchNumber('-10', 'F32', '0x000000000', '0x200000000');
         h5gg.editAll('999.33333', 'F32');
         h5gg.clearResults();
@@ -304,25 +304,16 @@ function flycar(input) {
     if (input.checked) {
         h5gg.clearResults();
         h5gg.searchNumber('-9.8', 'F32', '0x000000000', '0x200000000');
-        h5gg.editAll('5.33333', 'F32');
+        h5gg.editAll('3.33333', 'F32');
         h5gg.clearResults();
     } else {
         h5gg.clearResults();
-        h5gg.searchNumber('5.33333', 'F32', '0x000000000', '0x200000000');
+        h5gg.searchNumber('3.33333', 'F32', '0x000000000', '0x200000000');
         h5gg.editAll('-9.8', 'F32');
         h5gg.clearResults();
     }
 }
 
-function longname() {
-            h5gg.clearResults();
-            h5gg.searchNumber("4543443241174818784", "I32", "0x0", "0x200000000");
-            const results = h5gg.getResults(h5gg.getResultsCount());
-            h5gg.searchNearby('12', 'I32', '0x100');
-            h5gg.searchNumber("12", "I32", "0x0", "0x200000000");
-            h5gg.editAll('20', 'I32');
-            h5gg.clearResults();
-    }
 
 //フォント
 //大文字𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙
